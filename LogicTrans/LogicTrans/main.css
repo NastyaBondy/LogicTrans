@@ -1,0 +1,394 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    background-color: #f2f2f2;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 18px;
+    color: #555;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 70px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    color: #fff;
+}
+
+/*цвет для ссылок*/
+a {
+    color: #bdbdbd;
+}
+
+/*при наведении на ссылку, при фокусировке на ней*/
+a:hover, a:focus {
+    color: #E18D5E;
+    text-decoration: none;
+    outline: 0;
+}
+
+p {
+    color: #bdbdbd;
+    font-family: 'Roboto';
+    font-size: 14px;
+}
+
+/* Стили шапки сайта */
+
+/*значок гамбургера*/
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #E18D5E;
+    border-radius: 1px;
+}
+
+/*хедер*/
+.navbar {
+    font-weight: 800;
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: 'Roboto';
+}
+
+/*хедер (цвета)*/
+.navbar-inverse {
+    background: #2d2d2d;
+    border-color: #2d2d2d;
+}
+
+/*выделяем цветом страницу главная*/
+.navbar-inverse .navbar-nav > .active > a {
+    background-color: #E18D5E; 
+}
+
+/*лого сайта*/
+.img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Стили для футера */
+
+/*расположение и цвет футера*/
+#footer {
+    background-color: #2d2d2d;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*цвет иконок*/
+.social a {
+    color: #bdbdbd;
+    font-size: 30px;
+    padding: 5px;
+}
+
+/*цвет иконок при наведении*/
+.social a:hover {
+    color: #E18D5E;
+}
+
+/*заголовок в футере*/
+#footer h5 {
+    font-family: 'Roboto';
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#headerwrap {
+    background: url(../img/transfon4.png) no-repeat center top; 
+    margin-top: -10px;
+    padding-top: 20px;
+    text-align: center;
+    background-position: center center;
+    height: 600px;
+    width: 100%;
+}
+
+#headerwrap h1 {
+    margin-top: 170px;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+}
+
+#headerwrap h2 {
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: 'Roboto';
+    letter-spacing: 1px;
+}
+
+.w {
+    padding-top: 35px;
+}
+
+.w h4 {
+    font-size: 18px;
+    font-family: 'Roboto';
+    color: #2d2d2d;
+    font-weight: bold;
+}
+
+.w p {
+    color: #2d2d2d;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.r {
+    background-color: #E18D5E;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    width: 100%;
+}
+
+.r h4 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #f2f2f2;
+    font-family: 'Roboto';
+}
+
+.r ul {
+    color: #f2f2f2;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.q {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    width: 100%;
+}
+
+.q h4 {
+    font-size: 40px;
+    font-family: 'Roboto';
+    color: #2d2d2d;
+    font-weight: bold;
+    text-align: center;
+}
+
+.q label {
+    color: #2d2d2d;
+    font-family: 'Roboto';
+    font-size: 18px;
+}
+
+.q ul{
+    color: #2d2d2d;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+#aboutus {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    width: 100%;
+}
+
+#aboutus h4 {
+    font-size: 40px;
+    font-family: 'Roboto';
+    color: #2d2d2d;
+    font-weight: bold;
+    text-align: center;
+}
+
+#aboutus p {
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: lighter;
+    color: #2d2d2d;
+    text-align: left;
+}
+
+#calculator {
+    background-color: #E18D5E;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    width: 100%;
+}
+
+#calculator h4 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #f2f2f2;
+    font-family: 'Roboto'
+}
+
+#calculator p {
+    font-size: 20px;
+    font-weight: lighter;
+    color: #f2f2f2;
+    font-family: 'Roboto'
+}
+
+#newspage {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    width: 100%;
+}
+
+#newspage h4 {
+    font-size: 40px;
+    font-family: 'Roboto';
+    color: #2d2d2d;
+    font-weight: bold;
+    text-align: center;
+}
+
+#newspage h6 {
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: lighter;
+    color: #E18D5E;
+    text-align: left;
+}
+
+#newspage p {
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: lighter;
+    color: #2d2d2d;
+    text-align: left;
+}
+
+#vacancies {
+    background-color: #E18D5E;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    width: 100%;
+}
+
+#vacancies h4 {
+    font-size: 40px;
+    font-family: 'Roboto';
+    color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+}
+
+#vacancies p {
+    font-family: 'Roboto';
+    font-size: 25px;
+    font-weight: lighter;
+    color: #f2f2f2;
+    text-align: center;
+}
+
+#vacancies ul {
+    font-family: 'Roboto';
+    font-size: 22px;
+    font-weight: lighter;
+    color: #f2f2f2;
+    line-height: 40px;
+}
+
+#services {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    width: 100%;
+}
+
+#services h4 {
+    font-size: 40px;
+    font-family: 'Roboto';
+    color: #2d2d2d;
+    font-weight: bold;
+    text-align: center;
+}
+
+#services h5 {
+    font-size: 25px;
+    font-family: 'Roboto';
+    color: #2d2d2d;
+    font-weight: lighter;
+    text-align: center;
+}
+
+#services h6 {
+    font-size: 20px;
+    font-family: 'Roboto';
+    color: #2d2d2d;
+    font-weight: lighter;
+    text-align: center;
+}
+
+#services .well-1 {
+    background: #FFDBC0;
+}
+
+#services .well-2 {
+    background: #CBEDFF;
+}
+
+#services .well-3 {
+    background: #CBEDFF;
+}
+
+#services .well-4 {
+    background: #CBEDFF;
+}
+
+#services .well-5 {
+    background: #CBEDFF;
+}
+
+#application {
+    background-color: #E18D5E;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    width: 100%;
+}
+
+#application h4 {
+    font-size: 40px;
+    font-family: 'Roboto';
+    color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+}
+
+#application h5 {
+    font-size: 25px;
+    font-family: 'Roboto';
+    color: #f2f2f2;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.modal-header #exampleModalLongTitle {
+    text-align: center;
+    color: #2d2d2d;
+    font-family: 'Roboto';
+    font-size: 23px;
+    font-weight: bolder;
+}
+
+.modal-body p{
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Roboto';
+    color: #2d2d2d;
+    font-weight: lighter;
+}
+
+.modal-footer {
+    text-align: center;
+}
+

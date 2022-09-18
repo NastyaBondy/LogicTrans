@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<html lang="ru" ng-app="myapp">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Грузоперевозки</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="main.css">
+    <script src="Scripts/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body ng-app="myapp">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#headerwrap"><img src="img/logo3.png" alt="logo LogicTrans"></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#headerwrap">Главная</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#aboutus">О компании</a></li>
+                    <li><a href="#footer">Контакты</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-earphone"></i> +375(29)999-99-99</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="headerwrap">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1>Автомобильные грузоперевозки всех типов грузов от 1 кг до 100 тонн</h1>
+                    <h2>С 2010 года перевозим грузы по всей России, а также в страны СНГ и Европу</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container w">
+        <div class="row text-center">
+            <br><br>
+            <div class="col-lg-3">
+                <i class="bi bi-hourglass-split"></i>
+                <h4>Сроки доставки</h4>
+                <p>Полное соблюдение сроков доставки по договору</p>
+            </div>
+            <div class="col-lg-3">
+                <i class="bi bi-person-circle"></i>
+                <h4>Опытные водители</h4>
+                <p>Наши водители знают, что такое четкая погрузка и выгрузка</p>
+            </div>
+            <div class="col-lg-3">
+                <i class="bi bi-geo-alt-fill"></i>
+                <h4>Отслеживание грузов</h4>
+                <p>Мы знаем местонахождение каждого груза благодаря системе ГЛОНАСС</p>
+            </div>
+            <div class="col-lg-3">
+                <i class="bi bi-file-earmark-check-fill"></i>
+                <h4>Риски застрахованы</h4>
+                <p>Все перевозимые грузы застрахованы в ОАО "LogicTrans"</p>
+            </div>
+        </div>
+        <br><br>
+    </div>
+
+    <div>
+        <ng-include src="'aboutus.html'"></ng-include>
+    </div>
+
+    <div class="container r">
+        <div class="row text-center">
+            <h4>Этапы работы</h4>
+            <br>
+            <p>
+                <ul>
+                    <li ng-repeat="elm in [
+         {name: 'Оставляете заявку. Мы с вами связываемся, уточняем детали.'},
+         {name: 'Делаем расчет. Продумываем логистическое решение.'},
+         {name: 'Согласовываем все детали. Заполняем договор и вы производите оплату.'},
+         {name: 'Оперативно доставляем. Доставляем ваш груз в установленный срок.'}]">{{elm.name}}</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+    <div class="container q">
+        <h4>Часто задаваемые вопросы</h4>
+        <br>
+        <div>
+            <form>
+                <div class="col-lg-8 col-lg-offset-4">
+                    <label>
+                        <input type="radio" value="option1" ng-model="switch.Data">
+                        Нужна ли маркировка груза для отправки и зачем?
+                    </label>
+                </div>
+                <div class="col-lg-8 col-lg-offset-4">
+                    <label>
+                        <input type="radio" value="option2" ng-model="switch.Data">
+                        Какие данные необходимы, чтобы оформить заявку?
+                    </label>
+                </div>
+                <div class="col-lg-8 col-lg-offset-4">
+                    <label>
+                        <input type="radio" value="option3" ng-model="switch.Data">
+                        Какие документы нужны для получения груза ЮЛ?
+                    </label>
+                </div>
+                <div class="col-lg-8 col-lg-offset-4">
+                    <label>
+                        <input type="radio" value="option4" ng-model="switch.Data">
+                        Какие документы нужны для получения груза ФЛ?
+                    </label>
+                </div>
+            </form>
+
+            <div ng-switch="switch.Data" id="wrapper">
+                <div ng-switch-when="option1">
+                    <ul>
+                        <li>
+                            Для построения правильного процесса доставки груза и избежания ошибок ОБЯЗАТЕЛЬНО наличие маркировки на каждом грузовом месте.
+
+                            Маркировкой называются специальные надписи, условные знаки и коды, наносимые на продукцию, тару, упаковку или на сопровождающие их ярлыки. Существует товарная, отправительская, транспортная и специальная маркировки грузов.
+                    </ul>
+                </div>
+                <div ng-switch-when="option2">
+                    <ul>
+                        <li>наименование плательщика, отправителя и получателя, а также их адреса (местоположение) и телефон;
+                        <li>сведения о грузе и его особых свойствах;
+                        <li>ориентировочный вес, количество и габариты мест груза;
+                        <li>стоимость груза;
+                        <li>предполагаемая дата сдачи груза на склад Экспедитора или дата забора груза от Отправителя.
+                    </ul>
+                </div>
+                <div ng-switch-when="option3">
+                    <ul>
+                        <li>Печать компании-получателя или доверенность от данной компании на уполномоченное лицо, с указанием реквизитов организации (ИНН обязательно) и паспортных данных доверенного лица. Если данное лицо регулярно получает грузы через «ЛОГИСТИКА ЗАПАД», то удобнее будет сделать годовую генеральную доверенность на уполномоченных лиц.
+                        <li>Паспорт гражданина РФ доверенного лица получателя
+                    </ul>
+                </div>
+                <div ng-switch-when="option4">
+                    <ul>
+                        <li>Паспорт гражданина РФ
+                        <li>В случае, если получение поручено представителю физического лица, то у последнего должна быть нотариальная доверенность от грузополучателя с вписанными паспортными данными и документ, удостоверяющий личность представителя.
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="calculator">
+        <div class="container">
+            <div class="row text-center">
+                <div data-ng-init="weight=5;distance=1000">
+                    <h4>Расчет стоимости</h4>
+                    <br><br>
+                    <div class="col-lg-12">
+                        <p>
+                            Вес груза (кг):<input type="number" ng-model="weight">
+                            Расстояние (км): <input type="number" ng-model="distance">
+                        </p>
+                    </div>
+                    <br><br>
+                    <p><b>Стоимость перевозки (RUB): {{weight * distance / 10}}</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="newspage">
+        <div class="container">
+            <h4>Новости</h4>
+            <br><br>
+            <div class="col-lg-6">
+                <p>
+                    Для нашей компании март стал очень продуктивным месяцем.
+                    <br><br>Благодаря слаженной работе нашей команды мы смогли своевременно доставить грузы в 10 стран СНГ и Европы. Машины «LogicTrans» прибывали в Чехию, Словакию, Словению, Польшу, Литву, Германию, Беларусь, Россию, Казахстан и Узбекистан. Водители уверенно преодолевали время и капризную весеннюю погоду.
+                    <br><br>Гордимся качеством проделанной работы. Уверенны, что доказали делом, а не словом гарантию исполнения наших обязательств перед партнерами.
+                </p>
+                <button ng-click="count = count + 1" ng-init="count=0">Далее</button>
+                <br><br>
+                <h6>Данную статью уже прочитали {{count}} пользователей.</h6>
+            </div>
+            <div class="col-lg-6">
+                <img src="img/unnamed.png" alt="Новости Марта">
+            </div>
+        </div>
+    </div>
+
+
+    <div id="vacancies">
+        <div class="container">
+            <h4>Вакансии</h4>
+            <br><br>
+            <p>Приглашается на работу ответственный водитель-международник с опытом работы!</p>
+            <br><br>
+            <ng-tree></ng-tree>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h4>Наши услуги</h4>
+            <br><br>
+            <div ng-controller="cntrl_1">
+                <div class="well well-1 text-center">
+                    <h6>Нажмите на кнопку, чтобы детально ознакомиться с перечнем услуг</h6>
+                    <button class="btn btn-primary" ng-click="triggerBroadcast()">
+                        {{mainCtrlBtnLabel}}
+                    </button>
+                </div>
+                <div class="well well-2 text-center" ng-controller="cntrl_2">
+                    <h5>Экспедирование грузов</h5>
+                    <button class="btn btn-primary" ng-disabled="btn_status">
+                        {{btn_status_msg}}
+                    </button>
+                </div>
+                <div class="well well-3 text-center" ng-controller="cntrl_3">
+                    <h5>Контейнерные перевозки</h5>
+                    <button class="btn btn-primary" ng-disabled="btn_status">
+                        {{btn_status_msg}}
+                    </button>
+                </div>
+                <div class="well well-4 text-center" ng-controller="cntrl_4">
+                    <h5>Международные перевозки</h5>
+                    <button class="btn btn-primary" ng-disabled="btn_status">
+                        {{btn_status_msg}}
+                    </button>
+                </div>
+                <div class="well well-5 text-center" ng-controller="cntrl_5">
+                    <h5>Сборные перевозки</h5>
+                    <button class="btn btn-primary" ng-disabled="btn_status">
+                        {{btn_status_msg}}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="application">
+        <div class="container">
+            <h4>Нет времени разбираться?</h4>
+            <h4>Проконсультируем</h4>
+            <br><br>
+            <h5>Заполните форму и наш менеджер свяжется с вами в ближайшее время</h5>
+            <br><br>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ваше имя">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ваш телефон">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ваш e-mail">
+                </div>
+            </form>
+
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Оставить заявку</button>
+
+            <!-- Modal -->
+            <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Ваша заявка отправлена!</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p>Наш менеджер свяжется с вами в ближайшее время</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-dismiss="modal">ОК</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="container text-center text-md-left mt-5">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                    <a class="navbar-brand" href="#headerwrap"><img src="img/logo3.png" alt="logo LogicTrans"></a>
+                </div>
+                <div class="col-md- col-lg-3 col-xl-2 mx-auto mb-4">
+                    <h5 class="text-uppercase font-weight-bold">Услуги</h5>
+                    <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#">Экспедирование грузов</a>
+                    </p>
+                    <p>
+                        <a href="#">Контейнерные перевозки</a>
+                    </p>
+                    <p>
+                        <a href="#">Международные перевозки</a>
+                    </p>
+                    <p>
+                        <a href="#">Сборные перевозки</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h5 class="text-uppercase font-weight-bold">О компании</h5>
+                    <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#aboutus">ООО "LogicTrans"</a>
+                    </p>
+                    <p>
+                        <a href="#newspage">Новости</a>
+                    </p>
+                    <p>
+                        <a href="#vacancies">Вакансии</a>
+                    </p>
+                    <p>
+                        <a href="#">Отзывы</a>
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-3 col-xl-2 mx-auto mb-4">
+                    <h5 class="text-uppercase font-weight-bold">Контакты</h5>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="bi bi-house-door"></i> г.Москва, ул.Кижеватова, 136
+                    </p>
+                    <p>
+                        <i class="bi bi-envelope"></i> logictrans@gmail.com
+                    </p>
+                    <p>
+                        <i class="glyphicon glyphicon-earphone"></i> +375(29)999-99-99
+                    </p>
+                    <p>
+                        <i class="bi bi-clock"></i> 09:00-19:00
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <div class="col-md-4 col-lg-5">
+            <p class="text-center text-md-left">
+                © 2010-2021 Copyright:
+                <a href="#headerwrap"><strong>LogicTrans</strong></a>
+            </p>
+        </div>
+        <div class="text-center text-md-right">
+            <div class="social">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+                <a href="#"><i class="bi bi-telegram"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+</body>
+</html>

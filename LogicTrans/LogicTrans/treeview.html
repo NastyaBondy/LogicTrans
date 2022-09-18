@@ -1,0 +1,16 @@
+﻿<ul>
+    <li ng-repeat="item in items" ng-click="showVacancies(item)">
+        <span>{{item.label}}</span>
+        <ul>
+            <li ng-repeat="subItem in item.requirements" ng-show="item.active">
+                <span>{{subItem.requirement}}</span>
+            </li>
+            <li ng-repeat="subItem in item.conditions" ng-show="item.active">
+                <span>{{subItem.condition}}</span>
+            </li>
+            <li ng-repeat="subItem in item.additional_info" ng-show="item.active">
+                <span>{{subItem.info}}</span>
+            </li>
+        </ul>
+    </li>
+</ul>
